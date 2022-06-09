@@ -34,6 +34,7 @@ User=$USER
 Type=simple
 ExecStart=$(which subspace-node) --chain gemini-1 --wasm-execution compiled --execution wasm --pruning 1024 --keep-blocks 1024 --validator --name $SUBSPACE_NODENAME
 Restart=on-failure
+RestartSec=10
 LimitNOFILE=65535
 
 [Install]
@@ -49,6 +50,7 @@ User=$USER
 Type=simple
 ExecStart=$(which subspace-farmer) farm --reward-address $SUBSPACE_WALLET --plot-size $SUBSPACE_PLOT
 Restart=on-failure
+RestartSec=10
 LimitNOFILE=65535
 
 [Install]
