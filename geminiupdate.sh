@@ -19,6 +19,7 @@ sleep 1
 echo "[Unit]
 Description=Subspace Node
 After=network.target
+
 [Service]
 User=$USER
 Type=simple
@@ -26,6 +27,7 @@ ExecStart=$(which subspace-node) --chain gemini-1 --wasm-execution compiled --ex
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
+
 [Install]
 WantedBy=multi-user.target" > $HOME/subspaced.service
 
