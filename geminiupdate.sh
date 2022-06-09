@@ -16,7 +16,8 @@ sleep 3
 source ~/.bash_profile
 sleep 1
 
-echo "[Unit]
+sudo tee <<EOF >/dev/null /etc/systemd/system/subspaced.service
+[Unit]
 Description=Subspace Node
 After=network.target
 [Service]
