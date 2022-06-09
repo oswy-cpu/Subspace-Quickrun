@@ -16,8 +16,7 @@ sleep 3
 source ~/.bash_profile
 sleep 1
 
-sudo tee <<EOF >/dev/null /etc/systemd/system/subspaced.service
-[Unit]
+echo "[Unit]
 Description=Subspace Node
 After=network.target
 [Service]
@@ -27,7 +26,9 @@ ExecStart=$(which subspace-node) --chain gemini-1 --wasm-execution compiled --ex
 Restart=on-failure
 LimitNOFILE=65535
 [Install]
-WantedBy=multi-user.target" >/dev/null /etc/systemd/system/
+WantedBy=multi-user.target" > $HOME/subspaced.service
+
+mv $HOME/subspaced* /etc/systemd/system/
 
 
 echo "---------------------------------------------------"
