@@ -7,8 +7,6 @@ exists()
 sudo systemctl stop subspaced subspaced-farmer
 sudo systemctl disable subspaced-node subspaced-farmer
 sleep 2
-sudo apt update && sudo apt upgrade -y && sudo apt install curl wget htop nano -y
-sleep 2
 rm -rf /usr/local/bin/subspace*
 echo "---------------------------------------------------"
 echo -e "\e[32mЩас конфиг пофиксим: \e[0m" && sleep 2
