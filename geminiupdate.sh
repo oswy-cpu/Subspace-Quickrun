@@ -14,8 +14,6 @@ echo "---------------------------------------------------"
 echo -e "\e[32mЩас конфиг пофиксим: \e[0m" && sleep 2
 rm /etc/systemd/system/subspaced.service
 sleep 3
-nano /etc/systemd/system/subspaced.service
-sleep 3
 
 source ~/.bash_profile
 sleep 1
