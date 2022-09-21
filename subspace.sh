@@ -1,8 +1,5 @@
 #!/bin/bash
 
-ufw enable
-ufw allow 30333
-
 sudo apt update && sudo apt install ocl-icd-opencl-dev libopencl-clang-dev libgomp1 -y
 cd $HOME
 rm -rf subspace*
